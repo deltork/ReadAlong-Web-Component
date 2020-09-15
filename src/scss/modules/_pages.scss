@@ -1,4 +1,4 @@
-$max-height: 90vh;
+$max-height: 98vh;
 .pages {
   &__container {
     overflow: auto;
@@ -62,6 +62,12 @@ $max-height: 90vh;
             position: relative;
             @extend %themed-bg;
 
+          img {
+            height: 100%;
+            max-width: 95%;
+            object-fit: cover;
+          }
+
         }
 
         &__text {
@@ -111,7 +117,8 @@ $max-height: 90vh;
         @extend %themed-text;
         @extend %basic-text;
 
-        // font-size: 1.5em;
+        font-size: 1.8em;//syllabics font size need to bigger
+      font-family: $font-family-syllabics;
         &:hover {
             @extend %hover-shared;
             @extend %themed-text--strong;
@@ -124,7 +131,7 @@ $max-height: 90vh;
 }
 
 .read-along-container {
-    max-width: 55em;
+    max-width: 95%;
     margin: 0 auto;
     max-height: $max-height;
     height: $max-height;

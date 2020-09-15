@@ -5,7 +5,13 @@
 @if variable-exists(google-fonts-url) {
     @import url($google-fonts-url);
   }
-  
+
+@font-face {
+  font-family: "BJCree UNI";
+  src: url("https://www.eastcree.org/fonts/bjcrus.eot");
+  src: local("BJCree UNI"), url("https://www.eastcree.org/fonts/bjcrus.ttf") format("truetype");
+}
+
   @if variable-exists(typefaces) {
     @each $file, $option in $typefaces {
       @font-face {
