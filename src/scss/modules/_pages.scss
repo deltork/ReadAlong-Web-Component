@@ -34,7 +34,7 @@ $max-height: 98vh;
     &__container {
       display: grid;
       @extend %themed-bg;
-      grid-template-columns: [col-start] [col-end];
+      grid-template-columns:minmax(1rem, 45%) auto;
       grid-template-rows: [row-start] 5% [row-end] 95%;
       grid-template-areas:
         "image page-no"
@@ -55,6 +55,7 @@ $max-height: 98vh;
             grid-area: image;
             float: left;
             max-height: 100%;
+
             text-align: center;
             margin: 5%;
             padding: 0;
@@ -72,6 +73,13 @@ $max-height: 98vh;
 
         &__text {
             grid-area: text;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-content: stretch;
+            height: 100%;
+            overflow-y: auto ;
         }
 
     }
@@ -81,7 +89,7 @@ $max-height: 98vh;
 .paragraph {
 
     &__container {
-      overflow-y: auto ;
+
       padding-bottom: em(12);
     }
 }
@@ -97,7 +105,7 @@ $max-height: 98vh;
         scroll-behavior: smooth;
         max-width: 100%;
         position: relative;
-        overflow-y: auto;
+
         overflow-x: hidden;
 
         &__buttons {
@@ -110,6 +118,7 @@ $max-height: 98vh;
     &__text {
         @extend %basic-text;
         @extend %themed-text;
+        font-size: 1.15em;
     }
 
     &__word {
@@ -117,7 +126,7 @@ $max-height: 98vh;
         @extend %themed-text;
         @extend %basic-text;
 
-        font-size: 1.8em;//syllabics font size need to bigger
+        font-size: 1.95em;//syllabics font size need to bigger
       font-family: $font-family-syllabics;
         &:hover {
             @extend %hover-shared;

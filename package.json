@@ -1,7 +1,7 @@
 {
-  "name": "@roedoejet/readalong",
-  "version": "0.1.0",
-  "description": "ReadAlong Web Component",
+  "name": "@atlasling/readalong-syllabics",
+  "version": "1.1.1",
+  "description": "ReadAlong Web Component with Syllabics support",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
